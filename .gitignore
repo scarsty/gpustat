@@ -1,0 +1,4 @@
+gpustat/obj/
+gpustat/bin/
+*.ico
+.vs/

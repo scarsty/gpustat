@@ -1,0 +1,19 @@
+﻿<Window x:Class="gpustat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gpustat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="514.861" Width="682.725">
+    <Grid>
+        <RichTextBox x:Name="richTextBox" FontFamily="Consolas" IsReadOnlyCaretVisible="True" AcceptsReturn="False" AutoWordSelection="False" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
