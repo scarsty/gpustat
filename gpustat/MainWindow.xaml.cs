@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +40,13 @@ namespace gpustat
             System.Diagnostics.Process pProcess = new System.Diagnostics.Process();
 
             //strCommand指定要执行进程的路径
-            pProcess.StartInfo.FileName = @"C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe";
+            string s1 = @"C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe";
+            string s2 = @"C:\Windows\sysnative\nvidia-smi.exe";
+            pProcess.StartInfo.FileName = s1;
+            if (!File.Exists(s1))
+            {
+                pProcess.StartInfo.FileName = s2;
+            }
 
             pProcess.StartInfo.UseShellExecute = false;
             pProcess.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
